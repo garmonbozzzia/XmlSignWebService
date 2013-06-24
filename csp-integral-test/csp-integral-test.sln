@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csp-integral-test", "csp-integral-test.vcproj", "{A4421531-471E-40D8-AAE8-9457B34964BD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itcpkcs11tests", "pkcs11tests.std\source\itcpkcs11tests.vcproj", "{A03D986F-CA80-42BC-9909-73D720266703}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4421531-471E-40D8-AAE8-9457B34964BD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A4421531-471E-40D8-AAE8-9457B34964BD}.Debug|Win32.Build.0 = Debug|Win32
+		{A4421531-471E-40D8-AAE8-9457B34964BD}.Release|Win32.ActiveCfg = Release|Win32
+		{A4421531-471E-40D8-AAE8-9457B34964BD}.Release|Win32.Build.0 = Release|Win32
+		{A03D986F-CA80-42BC-9909-73D720266703}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A03D986F-CA80-42BC-9909-73D720266703}.Debug|Win32.Build.0 = Debug|Win32
+		{A03D986F-CA80-42BC-9909-73D720266703}.Release|Win32.ActiveCfg = Release|Win32
+		{A03D986F-CA80-42BC-9909-73D720266703}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

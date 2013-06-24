@@ -5,12 +5,7 @@ using System.Text;
 
 namespace TestApp
 {
-  class Program
+  public class CryptoProSigning
   {
-    static void Main(string[] args)
-    {
-      var testXml = new TestXml();
-      testXml.Run();
-    }
   }
 }

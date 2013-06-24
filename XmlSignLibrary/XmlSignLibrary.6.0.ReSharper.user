@@ -1,0 +1,60 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:signing.cpp" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:encryption.cpp" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:container.h" caret="0" fromTop="0" />
+      <File id="231B69C5-3232-4765-90FB-05AAF94CEBE4/f:WinCrypt.h" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:certificate-search.h" caret="0" fromTop="0" />
+      <File id="231B69C5-3232-4765-90FB-05AAF94CEBE4/f:SDKDDKVer.h" caret="0" fromTop="0" />
+      <File id="9A86C13D-A535-4B1E-84C5-1BBEB1A4254B/f:targetver.h" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:targetver.h" caret="0" fromTop="0" />
+      <File id="9A86C13D-A535-4B1E-84C5-1BBEB1A4254B/f:stdafx.h" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:stdafx.h" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:test-base.cpp" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:test-base.h" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:integral-test.h" caret="0" fromTop="0" />
+      <File id="9A86C13D-A535-4B1E-84C5-1BBEB1A4254B/f:VipNetApp.cpp" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:icsp-wrapper.h" caret="0" fromTop="0" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:settings.h" caret="0" fromTop="0" />
+      <File id="231B69C5-3232-4765-90FB-05AAF94CEBE4/f:csp-integral-test.cpp" caret="0" fromTop="0" />
+      <File id="D85FD53A-C1D3-44D7-B353-B18B198DBA03/f:VipNetSigning.h" caret="0" fromTop="0" />
+      <File id="6202BFD7-A1E8-4367-9EEE-77B09B3419C3/f:stdafx.h" caret="0" fromTop="0" />
+      <File id="6202BFD7-A1E8-4367-9EEE-77B09B3419C3/f:UnitTest1.cpp" caret="0" fromTop="0" />
+      <File id="D85FD53A-C1D3-44D7-B353-B18B198DBA03/f:ReadMe.txt" caret="0" fromTop="0" />
+      <File id="D85FD53A-C1D3-44D7-B353-B18B198DBA03/f:resource.h" caret="0" fromTop="0" />
+      <File id="D85FD53A-C1D3-44D7-B353-B18B198DBA03/f:Stdafx.h" caret="0" fromTop="0" />
+      <File id="D85FD53A-C1D3-44D7-B353-B18B198DBA03/f:AssemblyInfo.cpp" caret="0" fromTop="0" />
+      <File id="D85FD53A-C1D3-44D7-B353-B18B198DBA03/f:Stdafx.cpp" caret="0" fromTop="0" />
+      <File id="D85FD53A-C1D3-44D7-B353-B18B198DBA03/f:VipNetSigning.cpp" caret="0" fromTop="0" />
+      <File id="C60B347E-125C-4245-BB05-37B757F2DD89/f:UnitTest1.cs" caret="0" fromTop="0" />
+      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:Program.cs" caret="0" fromTop="0" />
+      <File id="F3B466DE-81AF-46A4-8E2C-9E46C5F73A01/f:IService1.cs" caret="421" fromTop="8" />
+      <File id="F3B466DE-81AF-46A4-8E2C-9E46C5F73A01/f:Web.config" caret="112" fromTop="4" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:Class1.cs" caret="143" fromTop="7" />
+      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:Program.cs" caret="178" fromTop="10" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:csp-integral-test.cpp" caret="982" fromTop="19" />
+      <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:signing.cpp" caret="873" fromTop="12" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="XmlSignLibrary">
+</Property><Property Name="Solution File" Value="C:\Work\XmlSign\trunk\XmlSignLibrary\XmlSignLibrary.sln">
+</Property><Property Name="Date" Value="4 июня 2013 г.">
+</Property><Property Name="Time" Value="16:15:43">
+</Property></Properties><Event ErrorLevel="0" Project="csp-integral-test" Source="..\..\..\csp-integral-test\csp-integral-test.vcproj" Description="Converting project file 'C:\Work\csp-integral-test\csp-integral-test.vcproj'.">
+</Event><Event ErrorLevel="1" Project="csp-integral-test" Source="..\..\..\csp-integral-test\csp-integral-test.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="csp-integral-test" Source="..\..\..\csp-integral-test\csp-integral-test.vcproj" Description="MSB8012: $(TargetPath) ('C:\Work\XmlSign\trunk\XmlSignLibrary\Debug\csp-integral-test.exe') does not match the Linker's OutputFile property value '.\bin\win32\debug\csp-integral-test.exe' ('C:\Work\XmlSign\trunk\XmlSignLibrary\bin\win32\debug\csp-integral-test.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="csp-integral-test" Source="..\..\..\csp-integral-test\csp-integral-test.vcproj" Description="MSB8012: $(TargetPath) ('C:\Work\XmlSign\trunk\XmlSignLibrary\Release\csp-integral-test.exe') does not match the Linker's OutputFile property value '.\bin\win32\release\csp-integral-test.exe' ('C:\Work\XmlSign\trunk\XmlSignLibrary\bin\win32\release\csp-integral-test.exe') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="csp-integral-test" Source="..\..\..\csp-integral-test\csp-integral-test.vcproj" Description="Done converting to new project file 'C:\Work\csp-integral-test\csp-integral-test.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="csp-integral-test" Source="..\..\..\csp-integral-test\csp-integral-test.vcproj" Description="Converted">
+</Event></UpgradeLog>

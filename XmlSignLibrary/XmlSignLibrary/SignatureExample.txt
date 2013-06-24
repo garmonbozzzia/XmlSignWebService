@@ -1,0 +1,26 @@
+﻿<wsse:Security soapenv:actor="http://smev.gosuslugi.ru/actors/smev">
+      <wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" 
+        ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" 
+        wsu:Id="CertId">
+        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
+      </wsse:BinarySecurityToken>
+      <ds:Signature>
+        <ds:SignedInfo>
+          <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+          <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#gostr34102001-gostr3411" />
+          <ds:Reference URI="#body">
+            <ds:Transforms>
+              <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#gostr3411" />
+            <ds:DigestValue>A5e8pr8auPlyE3xgn0ovEnR0fI9NtfbGa5FF+AddXaQ=</ds:DigestValue>
+          </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>BZhjEiXMxZRBgz9VteEyG7EIiosQxaP9WASPqAZZlQqONQMAUr9FNXMByNxqLYts0XC/O4DAg32THXebuHpzSQ==</ds:SignatureValue>
+        <ds:KeyInfo>
+          <wsse:SecurityTokenReference>
+            <wsse:Reference URI="#CertId" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" />
+          </wsse:SecurityTokenReference>
+        </ds:KeyInfo>
+      </ds:Signature>
+    </wsse:Security>
