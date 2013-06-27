@@ -27,19 +27,53 @@ namespace XmlSignLibrary
       var signedXml = new SignedXmlObject(doc) { KeyInfo = new KeyInfo(), SigningKey = (RSA)new RSACryptoServiceProvider() };
 
       var transform = new XmlDsigExcC14NTransform();
+
+
       var reference = new Reference { Uri = id };
       reference.AddTransform(transform);
       signedXml.AddReference(reference);
 
       signedXml.ComputeSignature();
 
+      
       var result = new StreamReader((MemoryStream)transform.GetOutput()).ReadToEnd();
       if (!Verify(result, reference.DigestValue)) throw new Exception("Wrong canonicalization object");
 
-      using (var file = File.CreateText(id.Replace("#", "canonical-")+".txt"))
-      {
-        file.WriteLine(result);
-      }
+      //using (var file = File.CreateText(id.Replace("#", "canonical-")+".txt"))
+      //{
+      //  file.WriteLine(result);
+      //}
+
+      return result;
+    }
+
+    public static string GetObject2(XmlDocument doc, string id)
+    {
+      var signedXml = new SignedXmlObject(doc) { KeyInfo = new KeyInfo(), SigningKey = (RSA)new RSACryptoServiceProvider() };
+
+      var transform1 = new XmlDsigEnvelopedSignatureTransform();
+      var transform2 = new XmlDsigC14NWithCommentsTransform();
+
+
+      var reference = new Reference { Uri = id };
+
+      reference.AddTransform(transform1);
+      reference.AddTransform(transform2);
+      signedXml.AddReference(reference);
+
+      signedXml.ComputeSignature();
+      //signedXml.
+
+      AsymmetricAlgorithm algorithm = new ECDsaCng();
+      signedXml.CheckSignature(algorithm);
+
+      var result = new StreamReader((MemoryStream)transform2.GetOutput()).ReadToEnd();
+      if (!Verify(result, reference.DigestValue)) throw new Exception("Wrong canonicalization object");
+
+      //using (var file = File.CreateText(id.Replace("#", "canonical2-") + ".txt"))
+      //{
+      //  file.WriteLine(result);
+      //}
 
       return result;
     }

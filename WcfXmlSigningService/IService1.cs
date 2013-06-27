@@ -14,7 +14,7 @@ namespace WcfXmlSigningService
   {
 
     [OperationContract]
-    string SignDocument(string value);
+    string SignDocument(string xml);
 
     [OperationContract]
     CompositeType GetDataUsingDataContract(CompositeType composite);

@@ -96,6 +96,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XmlSignLibrary\XmlSignLibrary\XmlSignLibrary.csproj">
+      <Project>{8EAD6979-24A0-496E-A90D-15D6C601452B}</Project>
+      <Name>XmlSignLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Service.cfg" />
+    <None Include="Service.cfg" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>

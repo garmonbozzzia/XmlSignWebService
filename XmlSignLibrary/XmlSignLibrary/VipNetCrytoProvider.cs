@@ -2,44 +2,14 @@ using System;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Linq;
+using System.Linq;
 using MyExtentions;
 
 namespace XmlSignLibrary
 {
-  public class PublicKey
-  {
-    public int Handle { get; private set; }
-    public byte[] Bytes { get; set; }
-    public String Hex { get { return Bytes.ByteArrayToString(); } }
-    public String Base64 { get { return Convert.ToBase64String(Bytes); } }
-    public PublicKey(int handle)
-    {
-      Handle = handle;
-    }
-  }
-
-  public class KeyPair
-  {
-    public int Handle { get; private set; }
-    
-    public KeyPair(int handle)
-    {
-      Handle = handle;
-    }
-  }
-
   public class PrivateKey
   {
     
-  }
-
-  public class Signature
-  {
-    public Hash SignedHash { get; set; }
-    public PublicKey Key { get; set; }
-    public byte[] Bytes { get; set; }
-    public String Hex { get { return Bytes.ByteArrayToString(); } }
-    public String Base64 { get { return Convert.ToBase64String(Bytes); } }
   }
 
   public class VipNetCrytoProvider
@@ -48,6 +18,9 @@ namespace XmlSignLibrary
     private KeyPair KeyPair { get; set; }
     
     //private int HashHandle { get; set; }
+    public const string ProviderName = "Infotecs Cryptographic Service Provider";
+    public string ContainerPath { get; set; }
+    public string Password { get; set; }
 
     private void OpenContainer()
     {
@@ -55,8 +28,8 @@ namespace XmlSignLibrary
 
       var result = VipNetImport.CryptAcquireContextW(
         ref hProv,
-        "C:\\Work\\certificate\\le-c60c3405-7918-479e-a4fe-e941118cc83e",
-        "Infotecs Cryptographic Service Provider", 2, 64);
+        ContainerPath,
+        ProviderName, 2, 64);
       Console.WriteLine("CryptAcquireContextW - {0}", result);
 
       ProviderHandle = hProv.ToInt32();
@@ -108,9 +81,9 @@ namespace XmlSignLibrary
       return hash;
     }
 
-    private Signature SigningHash(Hash hash)
+    public Signature SigningHash(Hash hash)
     {
-      var signature = new Signature();
+      var signature = new Signature(){SignedHash = hash};
       var pbSignature = IntPtr.Zero;
       var pdwLength = new IntPtr();
       var result = VipNetImport.CryptSignHash(hash.Handle, 2, null, 0, pbSignature, ref pdwLength);
@@ -128,7 +101,7 @@ namespace XmlSignLibrary
       Console.WriteLine("Signature: {0}", signature.Base64);
 
       //y2XdxwhHeZ0nReO2zFSJdBbObXcra+w0tK/dCukZUGF0kjsWq/+AbO4S4/PL7LX9C8fUu9D0WsZStxRjvSmApw==
-      signature.Key = ExportPublicKey();
+      signature.Key = ImportPublicKey();
 
       var privateKey = Convert.ToBase64String(ExportKeyData(VipNetConst.PrivateKeyBlob));
       //Private Key:"BxCKACMuAABJVENTTAAAAK0AAAAwgaoCAQMwbgIBAgICLiOgHjAcBgYqhQMCAhMwEgYHKoUDAgIjAQYHKoUDAgIeAaESBBCg4PLNAAAAAMD8/1W+Xs4BpiQwIoAPMjAxMzA2MDExMTUxMjFagQ8yMDE0MDYwMTExNTEyMVqnCwMJAIYzJMGalnL1MDUCAgQAAgJgLqcjAyEAkvgi9y7r1tivJcf6ZDJ56LEzqJZBmlAJ2yb/qyqJu56qBgIEgAAAAEwAAABvtgPbhcLo2eXmUKoVaZjWUJthcx81bqC1hg5hbJ/tnOQ6tho60A1FC2vU7/wvCqTBeQJwpCA7n0qAfXSiU2ncIG96jDkL4PWmx4a+"
@@ -136,7 +109,7 @@ namespace XmlSignLibrary
       //Public Key: "BiAAACMuAABNQUcxAAIAADASBgcqhQMCAiMBBgcqhQMCAh4BhjMkwZqWcvXgwPu0J5QiHE6G+2NnDNYmazapb5QCt0YCCLE/UyIysDJMKQZt1bJrdDXQ5AmeTncWkatgBdbJlg=="
       //"06200000232e00004d41473100020000301206072a85030202230106072a850302021e01863324c19a9672f5e0c0fbb42794221c4e86fb63670cd6266b36a96f9402b7460208b13f532232b0324c29066dd5b26b7435d0e4099e4e771691ab6005d6c996"
       //Signature:  "QtiWoUjMcdjlNOD3SL9tEWb6bG+oU8yXygrGMn4Qc7aKELF9BUKfSJNFyOf/5f90A5FLs9b+IKOIylRODMM4zg=="
-      if (!VerifySignature(signature, hash)) throw new Exception("VerifySignature not pass");
+      if (!VerifySignature(signature)) throw new Exception("VerifySignature not pass");
 
       return signature;
     }
@@ -151,17 +124,22 @@ namespace XmlSignLibrary
       return data;
     }
 
-    public PublicKey ExportPublicKey()
+    public PublicKey ImportPublicKey(byte[] keyData)
     {
-      var data = ExportKeyData(VipNetConst.PublicKeyBlob);
       var pPublicKey = new IntPtr();
-      var result = VipNetImport.CryptImportKey(ProviderHandle, data, data.Length, 0, 0, ref pPublicKey);
-      return new PublicKey(pPublicKey.ToInt32()){Bytes = data};
+      var result = VipNetImport.CryptImportKey(ProviderHandle, keyData, keyData.Length, 0, 0, ref pPublicKey);
+      return new PublicKey(pPublicKey.ToInt32()) { Bytes = keyData };
     }
 
-    private bool VerifySignature(Signature signature, Hash hash)
+    public PublicKey ImportPublicKey()
     {
-      return VipNetImport.CryptVerifySignature(hash.Handle, signature.Bytes, signature.Bytes.Length, signature.Key.Handle, null, 0);
+      var data = ExportKeyData(VipNetConst.PublicKeyBlob);
+      return ImportPublicKey(data);
+    }
+
+    public bool VerifySignature(Signature signature)
+    {
+      return VipNetImport.CryptVerifySignature(signature.SignedHash.Handle, signature.Bytes, signature.Bytes.Length, signature.Key.Handle, null, 0);
     }
 
     private string GetCertificate()
@@ -178,7 +156,7 @@ namespace XmlSignLibrary
       var base64PublicKey = Convert.ToBase64String(publicKeyValue);
       Console.WriteLine("Certificate:{0}", base64PublicKey);
       return base64PublicKey;
-    }       
+    }
 
     public void SignDocument(SignedXmlDocument document)
     {
@@ -187,18 +165,21 @@ namespace XmlSignLibrary
 
       //var objectToHash = SignedXmlDocument.Canonicalize(document.Body);
       var body = Canonicalizer.GetObject( document.Document.GetXmlDocument(), "#body");
+      Canonicalizer.GetObject2(document.Document.GetXmlDocument(), "#body");
       var hashBody = HashData(body);
       document.DigestValue.Value = hashBody.Base64;
       
 
       //var signedInfo = SignedXmlDocument.Canonicalize(document.SignedInfo);
-      var signedInfo = Canonicalizer.GetObject(document.Document.GetXmlDocument(), "#signedInfo");      
+      //var signedInfo = Canonicalizer.GetObject2(document.Document.GetXmlDocument(), "#signedInfo");
+      var signedInfo = Canonicalizer.GetObject(document.Document.GetXmlDocument(), "#SignedInfo");      
       var signature = SigningHash(HashData(signedInfo));
       document.SignedValue.Value = signature.Base64;
 
       Console.WriteLine(document);
 
-      if (!Verify(document.ToString().Replace("</soapenv:body>", " </soapenv:body>"), body, signedInfo)) throw new Exception("Not Correct Final Xml");
+      //if (!Verify(document.ToString().Replace("</soapenv:body>", " </soapenv:body>"), body, signedInfo)) throw new Exception("Not Correct Final Xml");
+      //if (!Verify(document.ToString(), body, signedInfo)) throw new Exception("Not Correct Final Xml");
 
 
 
@@ -218,13 +199,22 @@ namespace XmlSignLibrary
     
     public VipNetCrytoProvider()
     {
+      ContainerPath = "C:\\Work\\certificate\\le-c60c3405-7918-479e-a4fe-e941118cc83e";
+      Password = "Asdf1234";
+      Init();
+    }
+
+    public VipNetCrytoProvider(string containerPath, string password)
+    {
+      ContainerPath = containerPath;
+      Password = password;
       Init();
     }
 
     private void Init()
     {
       OpenContainer();
-      SetPassword("Asdf1234");
+      SetPassword(Password);
       OpenKey();
       CreateHashHandle();
     }

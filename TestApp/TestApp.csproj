@@ -69,6 +69,9 @@
     <Compile Include="CryptoProSigning.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignatureVerifier.cs" />
+    <Compile Include="SignedXmlPrefix.cs" />
+    <Compile Include="TestCertificate.cs" />
     <Compile Include="TestXml.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,10 +81,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\canonical-body.txt" />
+    <Content Include="bin\Debug\canonical-signedInfo.txt" />
+    <Content Include="bin\Debug\canonical2-body.txt" />
+    <Content Include="bin\Debug\canonical2-signedInfo.txt" />
+    <Content Include="bin\Debug\CorrectCertificate.txt" />
     <Content Include="bin\Debug\DocWithoutSignature2.txt" />
     <Content Include="bin\Debug\DocWithCorrectSignature.txt" />
     <Content Include="bin\Debug\DocWithoutSignature.txt" />
+    <Content Include="bin\Debug\original-signedInfo.txt" />
     <Content Include="bin\Debug\output.txt" />
+    <Content Include="bin\Debug\output2.txt" />
     <Content Include="bin\Debug\XMLFile1.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

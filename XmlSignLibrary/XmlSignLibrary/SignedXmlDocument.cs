@@ -53,14 +53,24 @@ namespace XmlSignLibrary
 
     public SignedXmlDocument(string document)
     {
-      Document = XDocument.Parse(document);
+      Document = XDocument.Parse(document, LoadOptions.None);
       AddNamespaces();
       if (!Body.HasAttributes) Body.Add(new XAttribute(wsu + "Id", "body"));
-      CreateSecurityElement();
+      if (Document.Element(ds + "SignedInfo") == null) 
+        
+      try
+      {
+        var a = SignedInfo;
+      }
+      catch (Exception)
+      {
+        CreateSecurityElement();
+      }
+
     }
     public override string ToString()
     {
-      return Document.ToString();
+      return Document.ToString(SaveOptions.DisableFormatting);
     }
 
     private void CreateSecurityElement()
@@ -76,7 +86,6 @@ namespace XmlSignLibrary
                                 ),
                               new XElement(ds + "Signature",
                                            new XElement(ds + "SignedInfo",
-                                                        new XAttribute( wsu + "Id", "signedInfo" ),
                                                         new XElement(ds + "CanonicalizationMethod",
                                                                      new XAttribute("Algorithm",
                                                                                     "http://www.w3.org/2001/10/xml-exc-c14n#")
@@ -91,7 +100,7 @@ namespace XmlSignLibrary
                                                                                   new XElement(ds + "Transform",
                                                                                                new XAttribute(
                                                                                                  "Algorithm",
-                                                                                                 "http://www.w3.org/2001/10/xml-exc-c14n#"))
+                                                                                                 "http://www.w3.org/2001/10/xml-exc-c14n#"))                                                                                  
                                                                        ),
                                                                      new XElement(ds + "DigestMethod",
                                                                                   new XAttribute("Algorithm",

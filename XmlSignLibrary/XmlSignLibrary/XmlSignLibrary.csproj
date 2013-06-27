@@ -65,8 +65,11 @@
     <Compile Include="CryptoData.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Hash.cs" />
+    <Compile Include="KeyPair.cs" />
     <Compile Include="MyExstensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicKey.cs" />
+    <Compile Include="Signature.cs" />
     <Compile Include="SignedXmlDocument.cs" />
     <Compile Include="SignedXmlObject.cs" />
     <Compile Include="VipNetCrytoProvider.cs" />
@@ -74,12 +77,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CorrectSignature.txt" />
+    <Content Include="CryptoProCertificate.txt" />
     <Content Include="DocWithCorrectSignature.txt" />
     <Content Include="DocWithCorrectSignature.xml" />
     <Content Include="DocWithoutSignature.txt" />
     <Content Include="DocWithoutSignature.xml" />
     <Content Include="Notes.txt" />
+    <Content Include="ShortDoc.txt" />
     <Content Include="SignatureExample.txt" />
+    <Content Include="VipnetCertificate.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
