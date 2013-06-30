@@ -9,6 +9,7 @@ namespace TestApp
   {
     static void Main(string[] args)
     {
+      new ServiceTest();
       var testXml = new TestXml();
       testXml.Run();
     }

@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Linq;
@@ -195,6 +196,16 @@ namespace XmlSignLibrary
       var correctSignedInfo = Canonicalizer.GetObject(document, "#signedInfo") == signedInfo;
 
       return correctBody && correctSignedInfo;
+    }
+
+    public static VipNetCrytoProvider GetInstance()
+    {
+      using (var config = File.OpenText("Config.txt"))
+      {
+        var containerPath = config.ReadLine();
+        var password = config.ReadLine();
+        return new VipNetCrytoProvider(containerPath, password);
+      }
     }
     
     public VipNetCrytoProvider()
