@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -33,15 +34,31 @@ namespace WcfTest1Lib
   {
     [MessageBodyMember(Name = "response", Namespace = "http://systemprojects.ru/")]
     public CDataWrapper Xml { get; set; }
+
+    [MessageBodyMember(Name = "error", Namespace = "http://systemprojects.ru/")]
+    public String Error { get; set; }
   }
 
   public class XmlSignService : IXmlSignService
   {
     public VipNetCrytoProvider CrytoProvider { get; set; }
+    public String ErrorMessage { get; set; }
 
     public XmlSignService()
     {
-      CrytoProvider = VipNetCrytoProvider.GetInstance();
+      ErrorMessage = "";
+      try
+      {
+        var configPath = AppDomain.CurrentDomain.BaseDirectory + "config.txt";
+        using (var file = File.OpenText(configPath))
+        {
+          CrytoProvider = new VipNetCrytoProvider(containerPath:file.ReadLine(), password:file.ReadLine());          
+        }
+      }
+      catch (Exception exception)
+      {
+        ErrorMessage = exception.Message + "\n" + exception.StackTrace;
+      }
     }
 
     //public string SignXml(string xml)
@@ -56,9 +73,17 @@ namespace WcfTest1Lib
 
     public ResponseMessage SignXml(RequestMessage xml)
     {
-      var doc = new SignedXmlDocument(xml.Xml.Value);
-      CrytoProvider.SignDocument(doc);
-      return new ResponseMessage(){Xml = doc.ToString()};
+      try
+      {
+        var doc = new SignedXmlDocument(xml.Xml.Value);
+        CrytoProvider.SignDocument(doc);
+        return new ResponseMessage(){Xml = doc.ToString()};
+      }
+      catch (Exception exception)
+      {
+        ErrorMessage += exception.Message + "\n" + exception.StackTrace;
+      }
+      return new ResponseMessage{ Xml = null, Error = ErrorMessage};
     }
 
     //public RequestCData SignData(RequestCData reqest)
