@@ -1,20 +1,27 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:MyExstensions.cs" caret="2532" fromTop="94" />
-      <File id="51F0DD0A-9BD5-4AFF-BB08-282C84BE8419/f:IXmlSignService.svc.cs" caret="0" fromTop="0" />
-      <File id="51F0DD0A-9BD5-4AFF-BB08-282C84BE8419/f:IXmlSignService.cs" caret="0" fromTop="0" />
-      <File id="DD9907ED-5ACE-4AA4-8041-6DD0005F5843/f:MainWindow.xaml" caret="0" fromTop="0" />
-      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:SignatureVerifier.cs" caret="2513" fromTop="27" />
-      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:SignedXmlDocument.cs" caret="1722" fromTop="5" />
-      <File id="36A8B346-274B-437C-A139-412537BCBD80/f:Program.cs" caret="1082" fromTop="6" />
-      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:App.config" caret="3066" fromTop="18" />
-      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:TestXml.cs" caret="655" fromTop="3" />
-      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:ServiceTest.cs" caret="334" fromTop="17" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="0" fromTop="0" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:ShortDoc.txt" caret="0" fromTop="0" />
+      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/d:bin/d:Debug/f:DocWithoutSignature2.txt" caret="0" fromTop="0" />
+      <File id="C488C8AC-D527-4C2E-AD0F-FEB28B8C467D/f:Web.config" caret="0" fromTop="0" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:Web.config" caret="0" fromTop="0" />
+      <File id="2FA47C65-1A47-4D2F-AC41-D3A68617D9BA/f:Web.config" caret="0" fromTop="0" />
+      <File id="2FA47C65-1A47-4D2F-AC41-D3A68617D9BA/f:IService1.cs" caret="0" fromTop="0" />
+      <File id="36A8B346-274B-437C-A139-412537BCBD80/f:Program.cs" caret="0" fromTop="0" />
+      <File id="F864EF7D-8C28-4F1C-9193-E1834228ED97/f:Service1.cs" caret="0" fromTop="0" />
+      <File id="F864EF7D-8C28-4F1C-9193-E1834228ED97/f:Web.config" caret="0" fromTop="0" />
+      <File id="B7268E70-BD79-4AAA-A5A4-5EEFABB7037B/f:Program.cs" caret="0" fromTop="0" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:CDataWrapper.cs" caret="1278" fromTop="10" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="3428" fromTop="14" />
+      <File id="C488C8AC-D527-4C2E-AD0F-FEB28B8C467D/f:XmlSign.svc" caret="0" fromTop="0" />
+      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:SignatureVerifier.cs" caret="0" fromTop="0" />
+      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:TestXml.cs" caret="0" fromTop="0" />
+      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:ServiceTest.cs" caret="0" fromTop="0" />
       <File id="F3B466DE-81AF-46A4-8E2C-9E46C5F73A01/f:SigningService.svc.cs" caret="0" fromTop="0" />
       <File id="D019DD6F-98B1-4947-B189-1076D181075E/f:CDataWrapper.cs" caret="0" fromTop="0" />
       <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:SignedXmlPrefix.cs" caret="0" fromTop="0" />
-      <File id="111BF35F-2F8E-44DC-AC2C-4337C5D0834D/f:csp-integral-test.cpp" caret="0" fromTop="0" />
+      <File id="58CE01DF-CAEA-40F8-B666-9ABD3CD4BA27/f:csp-integral-test.cpp" caret="0" fromTop="0" />
       <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:signing.cpp" caret="0" fromTop="0" />
       <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:csp-integral-test.cpp" caret="0" fromTop="0" />
       <File id="F3B466DE-81AF-46A4-8E2C-9E46C5F73A01/f:SigningService.svc" caret="0" fromTop="0" />
@@ -22,30 +29,40 @@
       <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:csp-loader-singleton.cpp" caret="0" fromTop="0" />
       <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:csp-direct-call.h" caret="0" fromTop="0" />
       <File id="A4421531-471E-40D8-AAE8-9457B34964BD/f:sign-message.cpp" caret="0" fromTop="0" />
-      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="229" fromTop="10" />
-      <File id="A3248718-B098-4F91-B5FB-FC6CE56128CD/f:Service1.svc.cs" caret="0" fromTop="0" />
-      <File id="45607102-1FA9-4C0C-91E2-BD298E8035E7/f:ServiceDefinition.csdef" caret="0" fromTop="0" />
-      <File id="45607102-1FA9-4C0C-91E2-BD298E8035E7/f:ServiceConfiguration.Local.cscfg" caret="0" fromTop="0" />
-      <File id="45607102-1FA9-4C0C-91E2-BD298E8035E7/f:ServiceConfiguration.Cloud.cscfg" caret="0" fromTop="0" />
+      <File id="7C8FCBD1-4C57-46E8-A2C4-9DB78520BA57/f:Program.cs" caret="819" fromTop="38" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:SignedXmlDocument.cs" caret="6998" fromTop="17" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:TestXml.cs" caret="7414" fromTop="10" />
-      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:MyExstensions.cs" caret="2532" fromTop="11" />
-      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:App.config" caret="2334" fromTop="11" />
-      <File id="36A8B346-274B-437C-A139-412537BCBD80/f:Program.cs" caret="415" fromTop="13" />
-      <File id="36A8B346-274B-437C-A139-412537BCBD80/f:Program.cs" caret="1072" fromTop="21" />
-      <File id="36A8B346-274B-437C-A139-412537BCBD80/f:Program.cs" caret="966" fromTop="17" />
-      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:App.config" caret="2484" fromTop="12" />
-      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:App.config" caret="2986" fromTop="13" />
-      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:App.config" caret="1527" fromTop="14" />
-      <File id="36A8B346-274B-437C-A139-412537BCBD80/f:Program.cs" caret="572" fromTop="10" />
-      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:App.config" caret="2005" fromTop="12" />
-      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:App.config" caret="1665" fromTop="16" />
-      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="17076" fromTop="7" />
-      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:SignatureVerifier.cs" caret="1466" fromTop="21" />
-      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:TestXml.cs" caret="10073" fromTop="18" />
-      <File id="8BEF7501-3BAD-402D-9307-20F130F806E0/f:TestXml.cs" caret="9016" fromTop="10" />
-      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:SignedXmlDocument.cs" caret="1746" fromTop="5" />
+      <File id="C488C8AC-D527-4C2E-AD0F-FEB28B8C467D/f:Web.config" caret="9171" fromTop="20" />
+      <File id="C488C8AC-D527-4C2E-AD0F-FEB28B8C467D/f:Web.config" caret="9104" fromTop="16" />
+      <File id="C488C8AC-D527-4C2E-AD0F-FEB28B8C467D/f:Web.config" caret="8539" fromTop="6" />
+      <File id="C488C8AC-D527-4C2E-AD0F-FEB28B8C467D/f:XmlSign.svc" caret="51" fromTop="0" />
+      <File id="C488C8AC-D527-4C2E-AD0F-FEB28B8C467D/f:Web.config" caret="8872" fromTop="11" />
+      <File id="C488C8AC-D527-4C2E-AD0F-FEB28B8C467D/f:Web.config" caret="2520" fromTop="26" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="1270" fromTop="6" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="1993" fromTop="17" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="2010" fromTop="18" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="378" fromTop="16" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="956" fromTop="19" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="1700" fromTop="17" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="2377" fromTop="12" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="1422" fromTop="15" />
+      <File id="C2008E27-2BBB-403F-AC76-D693A54A0BD5/f:XmlSignService.cs" caret="1542" fromTop="17" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:Canonicalizer.cs" caret="1174" fromTop="15" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:Canonicalizer.cs" caret="1215" fromTop="13" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="15807" fromTop="11" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="876" fromTop="20" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="738" fromTop="15" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="1125" fromTop="20" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="1419" fromTop="18" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="1692" fromTop="20" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="2035" fromTop="13" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="2903" fromTop="17" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="3678" fromTop="23" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:VipNetCrytoProvider.cs" caret="3523" fromTop="13" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:SignedXmlDocument.cs" caret="6574" fromTop="21" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:SignedXmlDocument.cs" caret="6745" fromTop="22" />
+      <File id="8EAD6979-24A0-496E-A90D-15D6C601452B/f:SignedXmlDocument.cs" caret="6596" fromTop="17" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -70,7 +87,7 @@
     <ItemStatistics item="CSharpCodeCompletionContext">
       <Item value="public" priority="123" />
       <Item value="interface" priority="30" />
-      <Item value="string" priority="95" />
+      <Item value="string" priority="127" />
       <Item value="class" priority="154" />
       <Item value="IXmlSignService`0" priority="31" />
       <Item value="return" priority="223" />
@@ -78,13 +95,13 @@
       <Item value="OperationContract" priority="122" />
       <Item value="MessageContract" priority="63" />
       <Item value="WrapperNamespace" priority="58" />
-      <Item value="prop" priority="191" />
-      <Item value="String`0" priority="93" />
+      <Item value="prop" priority="223" />
+      <Item value="String`0" priority="124" />
       <Item value="MessageBodyMember" priority="31" />
       <Item value="Name" priority="63" />
       <Item value="Namespace" priority="58" />
       <Item value="Request`0" priority="31" />
-      <Item value="new" priority="606" />
+      <Item value="new" priority="733" />
       <Item value="Response" priority="28" />
       <Item value="Xml" priority="63" />
       <Item value="Action" priority="31" />
@@ -94,7 +111,7 @@
       <Item value="xmlMessage" priority="31" />
       <Item value="XmlReader`0" priority="183" />
       <Item value="ArraySegment&lt;byte&gt;" priority="28" />
-      <Item value="var" priority="254" />
+      <Item value="var" priority="285" />
       <Item value="bytes" priority="32" />
       <Item value="byte" priority="28" />
       <Item value="CDataWrapper`0" priority="153" />
@@ -108,7 +125,7 @@
       <Item value="System" priority="31" />
       <Item value="ServiceModel" priority="26" />
       <Item value="ServiceHost`0" priority="50" />
-      <Item value="ServiceHost" priority="28" />
+      <Item value="ServiceHost" priority="57" />
       <Item value="BasicHttpBinding`0" priority="22" />
       <Item value="ReferenceEquals`0" priority="31" />
       <Item value="WcfServiceClient" priority="63" />
@@ -126,18 +143,18 @@
       <Item value="RequestCData`0" priority="63" />
       <Item value="RequestCData" priority="57" />
       <Item value="reqest" priority="32" />
-      <Item value="result" priority="31" />
+      <Item value="result" priority="63" />
       <Item value="WrapperName" priority="62" />
       <Item value="break" priority="31" />
       <Item value="data" priority="31" />
       <Item value="XmlTextReader" priority="26" />
       <Item value="reader2" priority="127" />
       <Item value="CDATA" priority="16" />
-      <Item value="if" priority="127" />
+      <Item value="if" priority="191" />
       <Item value="Text" priority="16" />
       <Item value="perfixData" priority="62" />
       <Item value="suffixData" priority="62" />
-      <Item value="using" priority="157" />
+      <Item value="using" priority="220" />
       <Item value="XmlSignLibrary" priority="61" />
       <Item value="VipNetCrytoProvider`0" priority="62" />
       <Item value="SignedXmlDocument`0" priority="63" />
@@ -146,19 +163,45 @@
       <Item value="VipNetCrytoProvider" priority="86" />
       <Item value="Uri`0" priority="31" />
       <Item value="static" priority="63" />
-      <Item value="ContainerPath" priority="31" />
+      <Item value="ContainerPath" priority="63" />
       <Item value="config" priority="63" />
       <Item value="Password" priority="31" />
-      <Item value="containerPath" priority="31" />
-      <Item value="password" priority="31" />
+      <Item value="containerPath" priority="95" />
+      <Item value="password" priority="95" />
       <Item value="File`0" priority="30" />
       <Item value="args" priority="381" />
-      <Item value="try" priority="31" />
-      <Item value="Console`0" priority="95" />
+      <Item value="try" priority="190" />
+      <Item value="Console`0" priority="159" />
       <Item value="exc" priority="31" />
       <Item value="Length" priority="53" />
-      <Item value="file" priority="31" />
+      <Item value="file" priority="95" />
       <Item value="provider" priority="31" />
+      <Item value="WcfServiceHost3" priority="63" />
+      <Item value="WcfServiceHost3._5" priority="30" />
+      <Item value="WcfServiceLibrary3._5" priority="25" />
+      <Item value="IService1`0" priority="31" />
+      <Item value="typeof" priority="31" />
+      <Item value="Service1`0" priority="31" />
+      <Item value="svcHost" priority="31" />
+      <Item value="exception" priority="161" />
+      <Item value="uri" priority="30" />
+      <Item value="WcfServiceLibrary2008" priority="29" />
+      <Item value="ErrorMessage" priority="96" />
+      <Item value="finally" priority="63" />
+      <Item value="null" priority="32" />
+      <Item value="Error" priority="32" />
+      <Item value="FileStyleUriParser`0" priority="30" />
+      <Item value="configPath" priority="30" />
+      <Item value="signedXml" priority="63" />
+      <Item value="reference" priority="31" />
+      <Item value="void" priority="31" />
+      <Item value="int" priority="31" />
+      <Item value="throw" priority="63" />
+      <Item value="Exception" priority="57" />
+      <Item value="errorMessage" priority="31" />
+      <Item value="Marshal`0" priority="31" />
+      <Item value="CheckCapicomResult`0" priority="31" />
+      <Item value="pSize" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:WcfTest1Lib.Request">
       <Item value="Xml" priority="27" />
@@ -212,21 +255,34 @@
       <Item value="ToString`0" priority="54" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.IO.File">
-      <Item value="OpenText`0" priority="53" />
+      <Item value="OpenText`0" priority="76" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.IO.StreamReader">
-      <Item value="ReadLine`0" priority="53" />
+      <Item value="ReadLine`0" priority="107" />
       <Item value="ReadToEnd`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@XmlSignLibrary.VipNetCrytoProvider">
       <Item value="GetInstance`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Console">
-      <Item value="WriteLine`0" priority="53" />
-      <Item value="ReadKey`0" priority="26" />
+      <Item value="WriteLine`0" priority="80" />
+      <Item value="ReadKey`0" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Exception">
-      <Item value="Message" priority="26" />
+      <Item value="Message" priority="80" />
+      <Item value="StackTrace" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ServiceModel.ServiceHost">
+      <Item value="Open`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.AppDomain">
+      <Item value="CurrentDomain" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Runtime.InteropServices.Marshal">
+      <Item value="GetLastWin32Error`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IntPtr">
+      <Item value="ToInt32`0" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
