@@ -76,15 +76,15 @@
     <Compile Include="VipNetImport.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CorrectSignature.txt" />
-    <Content Include="CryptoProCertificate.txt" />
-    <Content Include="DocWithCorrectSignature.txt" />
-    <Content Include="DocWithCorrectSignature.xml" />
-    <Content Include="DocWithoutSignature.txt" />
-    <Content Include="DocWithoutSignature.xml" />
-    <Content Include="Notes.txt" />
-    <Content Include="ShortDoc.txt" />
-    <Content Include="SignatureExample.txt" />
+    <Content Include="Examples\CorrectSignature.txt" />
+    <Content Include="Examples\CryptoProCertificate.txt" />
+    <Content Include="Examples\DocWithCorrectSignature.txt" />
+    <Content Include="Examples\DocWithCorrectSignature.xml" />
+    <Content Include="Examples\DocWithoutSignature.txt" />
+    <Content Include="Examples\DocWithoutSignature.xml" />
+    <Content Include="Examples\Notes.txt" />
+    <Content Include="Examples\ShortDoc.txt" />
+    <Content Include="Examples\SignatureExample.txt" />
     <Content Include="VipnetCertificate.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

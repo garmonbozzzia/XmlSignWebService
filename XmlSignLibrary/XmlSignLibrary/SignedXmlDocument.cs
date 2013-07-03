@@ -132,9 +132,16 @@ namespace XmlSignLibrary
       wsu = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd";
       ds = "http://www.w3.org/2000/09/xmldsig#";
 
-      AddNamespace(wsse, "wsse");
-      AddNamespace(wsu, "wsu");
-      AddNamespace(ds, "ds");
+      try
+      {
+        AddNamespace(wsse, "wsse");
+        AddNamespace(wsu, "wsu");
+        AddNamespace(ds, "ds");
+      }
+      catch (Exception)
+      {
+
+      }
     }
     private void AddNamespace(XNamespace ns, string name)
     {

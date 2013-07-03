@@ -33,7 +33,14 @@ namespace XmlSignLibrary
       reference.AddTransform(transform);
       signedXml.AddReference(reference);
 
-      signedXml.ComputeSignature();
+      try
+      {
+        signedXml.ComputeSignature();        
+      }
+      catch (Exception)
+      {
+
+      }
 
       
       var result = new StreamReader((MemoryStream)transform.GetOutput()).ReadToEnd();

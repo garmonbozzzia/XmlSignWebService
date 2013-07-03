@@ -23,6 +23,14 @@ namespace XmlSignLibrary
     public string ContainerPath { get; set; }
     public string Password { get; set; }
 
+    void CheckCapicomResult(string errorMessage, bool result)
+    {
+      if (!result)
+      {
+        throw new Exception(errorMessage + "- Error:" + Marshal.GetLastWin32Error());
+      }
+    }
+
     private void OpenContainer()
     {
       var hProv = new IntPtr();
@@ -32,7 +40,7 @@ namespace XmlSignLibrary
         ContainerPath,
         ProviderName, 2, 64);
       Console.WriteLine("CryptAcquireContextW - {0}", result);
-
+      CheckCapicomResult("OpenContainer" + ContainerPath, result);
       ProviderHandle = hProv.ToInt32();
     }
 
@@ -40,6 +48,7 @@ namespace XmlSignLibrary
     {
       byte[] pass = Encoding.ASCII.GetBytes(password);
       var result = VipNetImport.CryptSetProvParam(ProviderHandle, 33, pass, 0);
+      CheckCapicomResult("SetPassword" + password, result);
       Console.WriteLine("CryptSetProvParam - {0}", result);
     }
 
@@ -47,6 +56,7 @@ namespace XmlSignLibrary
     { 
       IntPtr hUserKey = new IntPtr();
       var result = VipNetImport.CryptGetUserKey(ProviderHandle, 2, ref hUserKey);
+      CheckCapicomResult("OpenKey", result);
       Console.WriteLine("CryptGetUserKey - {0}", result);
       KeyPair = new KeyPair(hUserKey.ToInt32());
     }
@@ -56,6 +66,7 @@ namespace XmlSignLibrary
 
       IntPtr hHash = new IntPtr();
       var result = VipNetImport.CryptCreateHash(ProviderHandle, 32798, 0, 0, ref hHash);
+      CheckCapicomResult("CreateHashHandle", result);
       Console.WriteLine("CryptCreateHash - {0}", result);      
       return hHash.ToInt32();
     }
@@ -74,6 +85,8 @@ namespace XmlSignLibrary
       result = VipNetImport.CryptGetHashParam(hash.Handle, 0x0002, pData, ref pSize, 0);
       pData = Marshal.AllocHGlobal(pSize.ToInt32());
       result = VipNetImport.CryptGetHashParam(hash.Handle, 0x0002, pData, ref pSize, 0);
+      CheckCapicomResult("HashData" + message, result);
+
       hash.Bytes = new byte[pSize.ToInt32()];
       Marshal.Copy(pData, hash.Bytes, 0, hash.Bytes.Length);
       Console.WriteLine("{0}, {0:X}",Marshal.GetLastWin32Error());
@@ -90,6 +103,10 @@ namespace XmlSignLibrary
       var result = VipNetImport.CryptSignHash(hash.Handle, 2, null, 0, pbSignature, ref pdwLength);
 
       signature.Bytes = new byte[pdwLength.ToInt32()];
+      if (pdwLength.ToInt32()==0)
+      {
+        CheckCapicomResult("SigningHash" + "length == 0", result);
+      }
       var size = pdwLength.ToInt32() * Marshal.SizeOf(signature.Bytes[0]);
       pbSignature = Marshal.AllocHGlobal(size);
 
@@ -166,7 +183,6 @@ namespace XmlSignLibrary
 
       //var objectToHash = SignedXmlDocument.Canonicalize(document.Body);
       var body = Canonicalizer.GetObject( document.Document.GetXmlDocument(), "#body");
-      Canonicalizer.GetObject2(document.Document.GetXmlDocument(), "#body");
       var hashBody = HashData(body);
       document.DigestValue.Value = hashBody.Base64;
       
